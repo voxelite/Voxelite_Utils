@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(Template C CXX)
+project(Voxelite_Utils C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
@@ -33,11 +33,11 @@ add_subdirectory(lib)
 
 file(GLOB_RECURSE PROJECT_SOURCE src/*.hpp src/*.cpp src/*.h src/*.c)
 
-add_library(Template STATIC ${PROJECT_SOURCE})
-target_include_directories(Template PUBLIC src/)
+add_library(Voxelite_Utils STATIC ${PROJECT_SOURCE})
+target_include_directories(Voxelite_Utils PUBLIC src/)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    target_link_libraries(Template -static-libgcc -static-libstdc++)
+    target_link_libraries(Voxelite_Utils -static-libgcc -static-libstdc++)
 endif()
 
 #--------------------------------

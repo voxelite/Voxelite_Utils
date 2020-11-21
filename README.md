@@ -1,6 +1,6 @@
-# Template
+# Voxelite Utils
 
-This is template project to allow fast and simple C++ project creation.
+General utilities used by different parts of Voxelite project
 
 ## Libraries
 
