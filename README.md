@@ -6,7 +6,7 @@ General utilities used by different parts of Voxelite project
 
 | Name | License | Version |
 |------|---------|---------|
-| ... | `MIT` / `GPLv3` | branch: `master` |
+| [OpenSSL](https://www.openssl.org/) + [cmake](https://github.com/viaduck/openssl-cmake) | [Apache License 2.0](https://github.com/openssl/openssl/blob/master/LICENSE) + [MIT](https://github.com/viaduck/openssl-cmake/blob/master/LICENSE) | branch: [`OpenSSL_0_9_6-stable`](https://github.com/openssl/openssl/tree/OpenSSL_0_9_6-stable) |
 
 All libraries are used as `static library` to maximize optimization and limit problems with deployment and versions.
 

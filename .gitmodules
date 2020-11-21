@@ -1,0 +1,4 @@
+[submodule "openssl"]
+	path = lib/openssl
+	url = git@github.com:viaduck/openssl-cmake.git
+	branch = master

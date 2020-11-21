@@ -40,6 +40,8 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_link_libraries(Voxelite_Utils -static-libgcc -static-libstdc++)
 endif()
 
+target_link_libraries(Voxelite_Utils crypto)
+
 #--------------------------------
 # Tests
 #--------------------------------
