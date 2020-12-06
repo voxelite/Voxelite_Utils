@@ -43,6 +43,7 @@ endif()
 if(MSVC)
     target_link_libraries(Voxelite_Utils ws2_32 gdi32 advapi32 crypt32 user32)
     target_link_libraries(Voxelite_Utils wsock32)
+    target_link_libraries(Voxelite_Utils legacy_stdio_definitions)
 endif()
 
 target_link_libraries(Voxelite_Utils crypto ssl)
