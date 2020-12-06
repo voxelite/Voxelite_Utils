@@ -36,11 +36,16 @@ file(GLOB_RECURSE PROJECT_SOURCE src/*.hpp src/*.cpp src/*.h src/*.c)
 add_library(Voxelite_Utils STATIC ${PROJECT_SOURCE})
 target_include_directories(Voxelite_Utils PUBLIC src/)
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_link_libraries(Voxelite_Utils -static-libgcc -static-libstdc++)
 endif()
 
-target_link_libraries(Voxelite_Utils crypto)
+if(MSVC)
+    target_link_libraries(Voxelite_Utils ws2_32 gdi32 advapi32 crypt32 user32)
+    target_link_libraries(Voxelite_Utils wsock32)
+endif()
+
+target_link_libraries(Voxelite_Utils crypto ssl)
 
 #--------------------------------
 # Tests
