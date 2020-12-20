@@ -2,7 +2,7 @@
 
 namespace Voxelite::Util
 {
-    static const int Codename_MinLength = 6;
+    static const int Codename_MinLength = 4;
     static const int Codename_MaxLength = 32;
     static const std::regex Codename_Regex = std::regex("^[a-z][a-z0-9_]+[a-z0-9]$");
 
